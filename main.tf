@@ -14,11 +14,11 @@ provider "aws" {
 }
 
 resource "aws_instance" "app_server" {
-#  ami                   = "ami-0fe896fd2ed2733a9" # ami2
-  ami                    = "ami-030e837d78f47cbb1" # ubuntu 22.04
+#  ami                   = "ami-0fe896fd2ed2733a9"  # ami2
+  ami                    = "ami-030e837d78f47cbb1"  # ubuntu 22.04
   instance_type          = "t3.micro"
-  vpc_security_group_ids = ["sg-07fa0ef9683e123ca"]
-  subnet_id              = "subnet-00f96059fc5b03970"
+  vpc_security_group_ids = ["sg-abc123"]            # use square bracket for SG
+  subnet_id              = "subnet-abc123"
 
   tags = {
     Name = "ExampleAppServerInstance"
